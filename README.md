@@ -1,3 +1,7 @@
+I have done some UI edits for the default progressbar we get with qbcore Tx Recipe
+
+Preview : https://imgur.com/DJ76b2m.gif
+
 # Progressbar
 
 Dependency for creating progressbars in QB-Core.

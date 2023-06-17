@@ -1,7 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&display=swap);
+@font-face {
+    font-family: "SparK";
+    src: url("../fonts/MoldeCondensedBold.ttf");
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 html {
     overflow: hidden;
-    font-family: 'Poppins', sans-serif;
+    font-family: "SparK";
 }
 
 body {
@@ -11,58 +17,148 @@ body {
     overflow: hidden;
     height: 100%;
     width: 100%;
+    
 }
 
 .progress-container {
     display: none;
     z-index: 5;
     color: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Oswald", sans-serif;
     width: 15%;
     position: fixed;
-    bottom: 12.65%;
+    bottom: 14.65%;
     left: 0;
-    right: 0;
+    right: 0%;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 6px;
+    animation: SlideUp .5s;
 }
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1) perspective(1em) rotateZ(0deg); }
+    25% { transform: scale(0.6, 1.3) perspective(1em) rotateZ(0deg); }
+    50% { transform: scale(1.3, 0.6) perspective(1em) rotateZ(0deg); }
+    75% { transform: scale(1.1, 1) perspective(1em) rotateZ(0deg); }
+    100% { transform: scale(1, 1) perspective(1em) rotateZ(0deg); }
+  }
 
 .progress-labels {
     width: 100%;
     height: 4vh;
     line-height: 4vh;
     text-align: center;
-    position: absolute;
+    position: relative;
     display: inline-block;
     white-space: nowrap;
 }
 
 .progress-labels div {
-    font-size: 1.3vh;
+    font-size: 2.5vh;
     line-height: 4vh;
     position: relative;
     color: #ffffff;
+    text-shadow: 0 0 4px #000;
+    text-align: center;
+    font-weight: 500;
     z-index: 10;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    left: 3vh;
+    top: -0vh;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
 }
 
 .progress-bar-container {
-    width: 100%;
-    height: 4vh;
-    background: rgba(0, 0, 0, 0.246);
-    text-align: left;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    white-space: nowrap;
-    border-radius: 2px;
+    width: 370px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(36, 48, 82, 0.4) 0, rgba(27, 30, 48, 0.7) 100%);
+    border: 1px solid rgba(14, 13, 27, 0.15);
+    border-radius: 3px;
+    height: 40px;
+    padding-left: 16px;
+    box-shadow: 1px 1px 3px rgba(13, 9, 29, 0.25);
+    padding-right: 16px
 }
 
+.inner-container {
+    position: relative;
+    height: 8px;
+    margin-bottom: 16px;
+    background: hsla(0, 0%, 100%, .16);
+    border-radius: 4px;
+    top: 15px
+  }
+
+  .inner-container2 {
+    position: relative;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, .4) 0, rgba(36, 39, 63, .7) 100%);
+    border-radius: 4px;
+  }
+
 .progress-bar {
-    background-color: #dc143c !important;
-    width: 0%;
-    height: 4vh;
-    transition: width 0.3s;
-    transition-timing-function: ease-out;
+
+    position: relative;
+    height: 8px;
+    background: linear-gradient(90deg, #4861a7 0.0%, #40fcfc 101.0%);
+    border-radius: 4px 0 0 4px;
+    bottom: 9px;
+    top: 0.0vh;
+    transition: .1s ease;
+}
+
+.progress-button {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 57, 98, .4) 0, rgba(36, 39, 63, .7) 100%);
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    width: 150px;
+    height: 70px;
+    display: none;
+    position: relative;
+    left: 48vw;
+    top: 87%;
+    animation: SlideUp .5s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)scale(0.5);
+    }
+    100% {
+        transform: rotate(360deg)scale(0.5);
+    }
+}
+
+.progress-button-text {
+    width: 100%;
+    height: 100%;  
+    color: #ffffff;
+    margin-left: -0.2vh;  
+    margin-top: 1.7vh;      
+    text-align: center;
+    font-family: Oswald;
+    text-shadow: 1px 1px 3px #000000;
+}
+.progress-button img {
+    margin-right: 5px; 
+    height: 18px;
+    width: 22px; 
+    left: -10vh;
+    margin-top: -0.2vh;
+    filter: brightness(1);
+    filter: drop-shadow(0px 0px 4px #000000);
+  }
+
+@keyframes SlideUp {
+    0% {
+        transform: translateY(200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
